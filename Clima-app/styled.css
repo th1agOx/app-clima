@@ -1,0 +1,42 @@
+* {
+    margin: 0 ;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-neutral: #d7d2cc ;
+    --color-neutral-header: #958f88 ;
+    --font-color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 90%;
+    margin: 20px, auto;
+    padding: 30px, 27px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.info-box {
+    background-color: var( --color-neutral-header);
+}
+
+main {
+    background-color: var(--color-neutral);
+}
+
+.search {
+    background-color: var( --color-neutral-header);
+}
