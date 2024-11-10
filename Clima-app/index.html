@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <title> Clima app </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="styled.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <img 
+                src="../Group 165.svg" 
+                alt="ícone Clima app"
+                id="ícone Group"
+            />
+
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="input-city" 
+                    placeholder="Search Location..."
+                />
+
+                <button id="search-button">
+                    <img 
+                        src="../fa_search.svg" 
+                        alt="botão de busca"
+                    />
+                </button>
+            </div>
+           
+        </div>
+
+        <div id="city-info" class="info-box">
+            <p id="temp"></p>
+            <h2 id="city-name"></h2>
+            <img src="" alt=""/>
+        </div>
+
+        <main>
+            <div id="details-info" class="details-box">
+                <H2>Weather Details...</H2>
+                <p></p>
+                <p>Temp max <span id="temp-max"></span>°</p>
+                <p>Temp min <span id="temp-min"></span>°</p>
+                <p>Humadity <span id="humidity"></span>%</p>
+
+            </div>
+
+            <footer>footer</footer>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
