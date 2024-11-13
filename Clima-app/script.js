@@ -12,7 +12,7 @@ function fetchWeather() {
     }
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric&lang=pt_br`
-
+ 
     fetch(url) 
         .then(response => {
             if (!response.ok) {
