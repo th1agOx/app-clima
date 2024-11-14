@@ -31,7 +31,7 @@ function fetchWeather() {
 
 //função para elementos que mudarão a partir da cidade declarada no input
 function changeWeather(data) {
-    document.getElementById('temperature').textContent = data.main.temp ;
+    document.getElementById('temperature').textContent = Math.floor(data.main.temp);
 
     document.getElementById('city-name').textContent = data.name;
 
