@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="search">
+        <header>
             <img 
                 src="../Group 165.svg" 
                 alt="ícone Clima app"
@@ -33,27 +33,34 @@
                 </button>
             </div>
             
-        </div>
+        </header>
         <main>
             <div class="info-box">
                 <p id="temperature"></p>
                 <div class="locationDetails">
                     <h1 id="city-name"></h1>
-                    <p id="date-current"></p>
+                    <div id="date-current"></div>
                 </div>
                 <img id="icon-weather" alt="icone de clima"/>
             </div>
 
-            <div class="details-box">
+            <div class="sidebar">
                 <span class="topTitle">Weather Details...</span> <br>
                 <div class="details-wrapper">
                     <strong id="description"></strong>
-                    <p>Temp max <span id="temp-max"></span><img src="../Hot Temp.svg" alt="icone temperatura máxima"></p>
-                    <p>Temp min <span id="temp-min"></span><img src="../Could Temp.svg" alt="icone temperatura mínima"></p>
-                    <p>Humadity <span id="humidity"></span><img src="../Umidade.svg" alt="icone humidade"></p>
+                    <p>Temp max 
+                        <span id="temp-max"></span>
+                        <img class="icon1" src="../Hot Temp.svg" alt="icone temperatura máxima">
+                    </p>
+                    <p>Temp min 
+                        <span id="temp-min"></span>
+                        <img class="icon2" src="../Could Temp.svg" alt="icone temperatura mínima">
+                    </p>
+                    <p>Humadity 
+                        <span id="humidity"></span>
+                        <img class="icon3" src="../Umidade.svg" alt="icone humidade">
+                    </p>
                 </div> 
-                
-                <footer>footer</footer>
             </div>
         </main>
     </div>
