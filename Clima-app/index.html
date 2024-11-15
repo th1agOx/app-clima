@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Clima app </title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styled.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <img 
-                src="../Group 165.svg" 
-                alt="ícone Clima app"
-            />
+                <img 
+                    src="../Group 165.svg" 
+                    alt="ícone Clima app"
+                    class="logo-display"
+                />
+
             <div class="input-wrapper">
                 <input 
                     type="text" 
@@ -25,10 +28,9 @@
                 />
                 <button id="search-button">
                     <img 
+                        class="src-display"
                         src="../fa_search.svg" 
                         alt="botão de busca"
-                        width="12"
-                        height="11"
                     />
                 </button>
             </div>
@@ -38,10 +40,10 @@
             <div class="info-box">
                 <p class="temperature-display" id="temperature"></p>
                 <div class="locationDetails">
-                    <h1 id="city-name"></h1>
-                    <div id="date-current"></div>
+                    <h1 class="city-display" id="city-name"></h1>
+                    <div clas="date-display" id="date-current"></div>
                 </div>
-                <img id="icon-weather" />
+                <img class="icon-display" id="icon-weather" />
             </div>
 
             <div class="sidebar">
