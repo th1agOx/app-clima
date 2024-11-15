@@ -31,19 +31,19 @@ function fetchWeather() {
 
 //função para elementos que mudarão a partir da cidade declarada no input
 function changeWeather(data) {
-    body.classList.remove('hot-weather', 'cold-weather', 'rainy-weather', 'foggy-weather');
+    // body.classList.remove('hot-weather', 'cold-weather', 'rainy-weather', 'foggy-weather');
 
-    const weatherMain = data.weather[0].main.toLowerCase();
+    // const weatherMain = data.weather[0].main.toLowerCase();
 
-    if (weatherMain.includes('clear')) {
-        body.classList.add('hot-weather');
-    } else if (weatherMain.includes('rain')) {
-        body.classList.add('rainy-weather');
-    } else if (weatherMain.includes('snow') || data.main.temp < 15) {
-        body.classList.add('cold-weather');
-    } else if (weatherMain.includes('fog') || weatherMain.includes('mist')) {
-        body.classList.add('foggy-weather');
-    }
+    // if (weatherMain.includes('clear')) {
+    //     body.classList.add('hot-weather');
+    // } else if (weatherMain.includes('rain')) {
+    //     body.classList.add('rainy-weather');
+    // } else if (weatherMain.includes('snow') || data.main.temp < 15) {
+    //     body.classList.add('cold-weather');
+    // } else if (weatherMain.includes('fog') || weatherMain.includes('mist')) {
+    //     body.classList.add('foggy-weather');
+    // }
 
     document.getElementById('temperature').textContent = `${Math.floor(data.main.temp)}°`;
 
