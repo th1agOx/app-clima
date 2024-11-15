@@ -31,11 +31,25 @@ function fetchWeather() {
 
 //função para elementos que mudarão a partir da cidade declarada no input
 function changeWeather(data) {
-    document.getElementById('temperature').textContent = Math.floor(data.main.temp);
+    body.classList.remove('hot-weather', 'cold-weather', 'rainy-weather', 'foggy-weather');
 
-    document.getElementById('city-name').textContent = data.name;
+    const weatherMain = data.weather[0].main.toLowerCase();
 
-    document.getElementById('icon-weather').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    if (weatherMain.includes('clear')) {
+        body.classList.add('hot-weather');
+    } else if (weatherMain.includes('rain')) {
+        body.classList.add('rainy-weather');
+    } else if (weatherMain.includes('snow') || data.main.temp < 15) {
+        body.classList.add('cold-weather');
+    } else if (weatherMain.includes('fog') || weatherMain.includes('mist')) {
+        body.classList.add('foggy-weather');
+    }
+
+    document.getElementById('temperature').textContent = `${Math.floor(data.main.temp)}°`;
+
+    document.getElementById('city-name').textContent = data.name ;
+
+    document.getElementById('icon-weather').src = ` https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
 
     document.getElementById('description').textContent = data.weather[0]?.description
 
