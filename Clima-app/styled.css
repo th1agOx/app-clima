@@ -5,10 +5,10 @@
 }
 
 :root {
-    --color-neutral: rgba(0, 0, 0, 0.397);
-    --color-neutral-bluer: rgba(149, 143, 136, 0.663) ;
+    --background-neutral: rgba(0, 0, 0, 0.575);
+    --background-neutral-bluer: rgba(149, 143, 136, 0.663) ;
     --font-color-white: rgb(255, 255, 255);
-    --font-color-opacity-70:rgba(255, 255, 255, 0.575) ;
+    --font-color-opacity-70:rgba(255, 255, 255, 0.397) ; 
 }
 
 body {
@@ -22,11 +22,15 @@ body {
     color: var(--font-color-white);
     font-weight: 400;
     font-size: 14px;
-    max-width: 768px;
     margin:auto;
 
-    background-color: var(--color-neutral);
+    background-color: var(--background-neutral);
 }
+
+/* .foggy-weather {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    transition: background 0.5s ease;
+} */
 
 .container {
     padding: 22px 19px;
@@ -48,12 +52,17 @@ header .input-wrapper {
 }
   
 header .input-wrapper #city-input {
+    all: unset;
     background: transparent;
     color: var(--font-color-opacity-70);
-    border: none;
-    outline: 1px;
+    border-bottom: 1px solid var(--font-color-white); 
+    text-align: left;
 
     cursor: pointer;
+}
+
+header .input-wrapper #city-input:focus {
+    outline: none;
 }
 
 header .input-wrapper #search-button {
@@ -88,8 +97,8 @@ main .info-box {
     font-weight: 400;
 }
 
-#temprature {
-    font-size: 86px;
+.temperature-display {
+    font-size: 64px;
     margin-right: 10px;
 }
 
@@ -103,11 +112,14 @@ main .info-box {
 }
 
 .sidebar {
-    padding: 20px;
+    padding: 20px 20px 65px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-gap: 10px;
+    gap: 10px;
+
+    border-bottom: 1px solid var(--font-color-white);
+
 }
 
 .sidebar .topTitle {
@@ -149,8 +161,10 @@ gap: 10px;
     text-transform: uppercase;
 }
 
-.details-wrapper p {
-    color: var(--font-color-opacity);
+.Weather-max,
+.Humadity,
+.Weather-min {
+    color: var(--font-color-opacity-70);
     font-size: 12px;
 }
 
@@ -160,3 +174,26 @@ gap: 10px;
     width: 11px;
     height: 20px;
 } 
+
+
+@media (min-width: 799px ) {
+   .container {
+    max-width: 1183px;
+   }
+
+   main {
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-end;
+    gap: 285px;
+   }
+
+   main .info-box {
+    display: flex;
+    max-width: 509px;
+   }
+
+   .sidebar {
+    max-width: 371px;
+   }
+}
