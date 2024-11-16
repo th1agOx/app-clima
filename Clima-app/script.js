@@ -3,6 +3,13 @@ const API_KEY = '15e5b5d3fbdc3a011ff11395b100a0e7' ;
 // ADD listener ( botão de busca )
 document.getElementById('search-button').addEventListener('click', fetchWeather);
 
+// ADD busca a partir do click no botão ENTER
+document.getElementById('city-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') { // Verifica se a tecla pressionada foi Enter
+        fetchWeather();
+    }
+});
+
 function fetchWeather() {
     const cityName = document.getElementById('city-input').value.trim();
 
@@ -16,7 +23,7 @@ function fetchWeather() {
     fetch(url) 
         .then(response => {
             if (!response.ok) {
-                throw new Error('Cidade não localizada');
+                throw new Error();
             }
             return response.json();  //converte para JSON type
         }) 
@@ -31,20 +38,6 @@ function fetchWeather() {
 
 //função para elementos que mudarão a partir da cidade declarada no input
 function changeWeather(data) {
-    // body.classList.remove('hot-weather', 'cold-weather', 'rainy-weather', 'foggy-weather');
-
-    // const weatherMain = data.weather[0].main.toLowerCase();
-
-    // if (weatherMain.includes('clear')) {
-    //     body.classList.add('hot-weather');
-    // } else if (weatherMain.includes('rain')) {
-    //     body.classList.add('rainy-weather');
-    // } else if (weatherMain.includes('snow') || data.main.temp < 15) {
-    //     body.classList.add('cold-weather');
-    // } else if (weatherMain.includes('fog') || weatherMain.includes('mist')) {
-    //     body.classList.add('foggy-weather');
-    // }
-
     document.getElementById('temperature').textContent = `${Math.floor(data.main.temp)}°`;
 
     document.getElementById('city-name').textContent = data.name ;
@@ -62,15 +55,21 @@ function changeWeather(data) {
 }
 
 function changeWeatherError() {
-    document.getElementById('city-input').textContent = 'Error' ;
+    document.getElementById('error-message').style.display = 'block' ; 
 
-    document.getElementById('icon-weather').src = '';
+    document.getElementById('city-input').focus();  //retorna o foco ao input
+ 
+    document.getElementById('city-input').value= '' ;   //limpa o campo da cidade
 
-    document.getElementById('temperature').textContent = 
+    document.getElementById('city-input').textContent = 'Cidade não encontrada' ;
 
-    document.getElementById('date-current').textContent = '';
+    document.getElementById('icon-weather').src = 'Icone Error';
 
-    document.getElementById('description').textContent = '';
+    document.getElementById('temperature').textContent = 0
+
+    document.getElementById('date-current').textContent = 'Cidade não encontrada';
+
+    document.getElementById('description').textContent = 'Description error';
 
     document.getElementById('temp-max').textContent = 0 ;
 
