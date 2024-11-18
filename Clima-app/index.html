@@ -25,7 +25,6 @@
                     id="city-input" 
                     placeholder="Search Location..."
                 />
-                <div id="error-message" style="color: red; display: none;">A cidade digitada não existe, por favor tente novamente .</div>
                 <button id="search-button">
                     <img 
                         class="src-display"
@@ -48,20 +47,27 @@
 
             <div class="sidebar">
                 <span class="topTitle">Weather Details...</span> <br>
+                <strong class="display-description" id="description"></strong>
                 <div class="details-wrapper">
-                    <strong class="display-description" id="description"></strong>
-                    <p class="Weather-max">Temp max 
+
+                    <p class="Weather-max">
+                        Temp max 
                         <span id="temp-max"></span>
                         <img class="icon1" src="../Hot Temp.svg" alt="icone temperatura máxima">
                     </p>
-                    <p class="Weather-min"> Temp min 
+
+                    <p class="Weather-min"> 
+                        Temp min 
                         <span id="temp-min"></span>
                         <img class="icon2" src="../Could Temp.svg" alt="icone temperatura mínima">
                     </p>
-                    <p class="Humadity">Humadity 
+
+                    <p class="Humadity">
+                        Humadity 
                         <span id="humidity"></span>
                         <img class="icon3" src="../Umidade.svg" alt="icone humidade">
                     </p>
+
                 </div> 
             </div>
         </main>
