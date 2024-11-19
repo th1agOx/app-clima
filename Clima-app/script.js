@@ -29,7 +29,7 @@ function fetchWeather() {
         }) 
         .then(data => {
             changeWeather(data); //Trás os dados da função localizada pelo id do HTML
-            console.log(data)
+            console.log(data)    // consulta os dados da API
         })
         .catch( error => {
             changeWeatherError(error); 
@@ -54,20 +54,14 @@ function changeWeather(data) {
 
 }
 
-function changeWeatherError() {
-    document.getElementById('error-message').style.display = 'block' ; 
-
+function changeWeatherError() {  
     document.getElementById('city-input').focus();  //retorna o foco ao input
- 
-    document.getElementById('city-input').value= '' ;   //limpa o campo da cidade
 
     document.getElementById('city-input').textContent = 'Cidade não encontrada' ;
 
     document.getElementById('icon-weather').src = 'Icone Error';
 
     document.getElementById('temperature').textContent = 0
-
-    document.getElementById('date-current').textContent = 'Cidade não encontrada';
 
     document.getElementById('description').textContent = 'Description error';
 
