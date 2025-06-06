@@ -1,10 +1,22 @@
-# CLIMA-APP
+# App Clima ☁️
 
-Aplicativo simples e dinâmico para consulta do clima tempo em qualquer cidade do Globo terrestre.
+Aplicação web desenvolvida com React + TypeScript para consultar a previsão do tempo usando a API da OpenWeather.
 
+## Tecnologias
+- React
+- TypeScript
+- TailwindCSS
+- OpenWeather API
 
-Consumindo a API openweathermap a partir de um nome e um clique você tem a precisão exata da temperatura do local digitado no input no header da página !
+## Funcionalidades
+- Busca por cidade
+- Exibição de temperatura atual, umidade e sensação térmica
+- Interface responsiva
 
-O aplicativo é responsivo então se você estiver pelo celular ou em viwports menores que 800px você só precisará scrollar a página para baixo 
+## Como rodar localmente
 
-Se estiver no desktop ou no notebook poderá visualizar o clima na parte esquerda da sua tela :>
+```bash
+git clone https://github.com/th1agOx/app-clima.git
+cd app-clima
+npm install
+npm run dev
