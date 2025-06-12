@@ -1,11 +1,11 @@
 const API_KEY = '15e5b5d3fbdc3a011ff11395b100a0e7' ;
 
-// ADD listener ( botão de busca )
+// ADD listener 
 document.getElementById('search-button').addEventListener('click', fetchWeather);
 
-// ADD busca a partir do click no botão ENTER
+// ADD busca 
 document.getElementById('city-input').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') { // Verifica se a tecla pressionada foi Enter
+    if (event.key === 'Enter') { 
         fetchWeather();
     }
 });
@@ -25,18 +25,18 @@ function fetchWeather() {
             if (!response.ok) {
                 throw new Error();
             }
-            return response.json();  //converte para JSON type
+            return response.json();  
         }) 
         .then(data => {
-            changeWeather(data); //Trás os dados da função localizada pelo id do HTML
-            console.log(data)    // consulta os dados da API
+            changeWeather(data); 
+            console.log(data)   
         })
         .catch( error => {
             changeWeatherError(error); 
         });
 }
 
-//função para elementos que mudarão a partir da cidade declarada no input
+
 function changeWeather(data) {
     document.getElementById('temperature').textContent = `${Math.floor(data.main.temp)}°`;
 
