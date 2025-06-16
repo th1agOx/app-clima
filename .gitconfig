@@ -3,9 +3,3 @@
 	email = thdarochabp@gmail.com
 [init]
 	defaultBranch = main
-
-.bash_history
-.lesshst
-.node_repl_history
-.npmrc
-node_modules

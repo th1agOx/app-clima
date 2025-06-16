@@ -1,4 +1,4 @@
-/* 
+/** 
 *   Validação de conexões HTTPS autenticadas por VPNs ou Proxys ou firewalls 
 *   Pressupõe-se que o certificado esteja salvo em uma variavel de sistemas ou no local de instalação do node 
 */
@@ -14,6 +14,3 @@ Axios.get('https://registry.npmjs.org/')
     .then(response => console.log('✅ Sucesso:', response.status))
     .catch(err => console.error('❌ Erro de autenticação no SLL:', err.message))
 
-
-// 
-//  adicionar como testar a conexões para requisições via axios com Node para urls externas 
