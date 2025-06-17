@@ -1,0 +1,6 @@
+:root{
+    --background-neutral: rgba(0, 0, 0, 0.575);
+    --background-neutral-bluer: rgba(149, 143, 136, 0.663) ;
+    --font-color-white: rgb(255, 255, 255);
+    --font-color-opacity-70:rgba(255, 255, 255, 0.397) ; 
+}
