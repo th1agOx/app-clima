@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@tanstack/react-router": "^1.121.17",
+    "axios": "^1.10.0",
+    "dotenv": "^16.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icon": "^1.0.0",
